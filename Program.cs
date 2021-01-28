@@ -62,15 +62,15 @@ namespace RTS
     private static void RotateCharacters()
     {
       Console.WriteLine("\nEnter a string:");
-      var stringInput = Console.ReadLine();
-
-      Console.WriteLine("\nEnter a rotate amount:");
-      var rotateInput = Console.ReadLine();
+      var stringInput = Console.ReadLine();  
 
       int rotateValue = default;
       var invalidInput = true;
       while (invalidInput)
       {
+        Console.WriteLine("\nEnter a rotate amount:");
+        var rotateInput = Console.ReadLine();
+
         if (int.TryParse(rotateInput, out rotateValue) && rotateValue <= stringInput.Length)
         {
           invalidInput = false;
